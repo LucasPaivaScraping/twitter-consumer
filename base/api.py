@@ -21,7 +21,7 @@ class ApiRest(object):
     def run(self):
         app.run(port=self.api_port)
 
-    @api.app.route('/{}/user/<user_name>'.format(API_NAME), methods=['get'])
+    @api.app.route('/{}/tw-user-info/<user_name>'.format(API_NAME), methods=['get'])
     def get_user_info(user_name):
         try:
             # First check valid credentials
