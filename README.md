@@ -53,8 +53,8 @@ sh ./run.sh
 
 ### Usage
 
-Make a curl request to test de endpoint /tw-user-info/{twitter-user-name}
-You can setup custom values for Api PORT
+Make a curl request to test the endpoint /tw-user-info/{twitter-user-name}
+You can setup custom values for Api Port
 ```
 curl -v http://127.0.0.1:8000/twitter-consumer/user/milanesacosmika
 ```
