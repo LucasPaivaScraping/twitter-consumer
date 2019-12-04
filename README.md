@@ -45,10 +45,16 @@ API_PORT = 8000
 TW_CREDENTIALS_FILE = "credentials.json"
 ```
 
+## Running the tests
+For start app, just
+```
+python -m main
+```
+
 ### Usage
 
 Make a curl request to test de endpoint /tw-user-info/{twitter-user-name}
-
+You can setup custom values for Api PORT
 ```
 curl -v http://127.0.0.1:8000/twitter-consumer/user/milanesacosmika
 ```
