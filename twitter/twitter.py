@@ -20,15 +20,12 @@ class TwitterClient(object):
         self.user_profile_data = self.api_twitter.get_user(user_name)
         return self.user_profile_data
 
-    def get_followers(self, user_name):
-        self.followers = self.api_twitter.followers(user_name, count=self.user_profile_data.followers_count)
+    def get_followers(self, user_name, count=100):
+        self.followers = self.api_twitter.followers(user_name, count=count)
         return self.followers
 
-    def credential_validation(self):
-        pass
-
-    def get_instance(self):
-        pass
+    def check_credentials(self):
+        return self.api_twitter.verify_credentials()
 
 
 class TwUser(object):
