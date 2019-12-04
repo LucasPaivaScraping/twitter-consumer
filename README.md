@@ -46,9 +46,9 @@ TW_CREDENTIALS_FILE = "credentials.json"
 ```
 
 ## Running the tests
-For start app, just
+For starting virtual environment and API, just
 ```
-python -m main
+sh ./run.sh
 ```
 
 ### Usage
@@ -73,7 +73,8 @@ Clone repository on your local machine or server and follow the install instruct
 ```
 git clone git@github.com:noctilukkas/twitter-consumer.git
 ```
-
+*Note:
+This app was developed and tested on Mac OS (Darwin)
 
 ## Built With
 
