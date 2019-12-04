@@ -8,12 +8,11 @@ from utils.config import API_NAME, API_PORT, TW_CREDENTIALS_FILE
 
 app = Flask(__name__)
 api = Api(app)
+app.config['JSON_SORT_KEYS'] = False
 
 
 class ApiRest(object):
     def __init__(self, credentials, api_name, api_port):
-        #self.api = Api(app)
-        #self.app = app #Bad idea
         self.credentials = credentials
         self.api_name = api_name
         self.api_port = api_port
@@ -21,6 +20,7 @@ class ApiRest(object):
     def run(self):
         app.run(port=self.api_port)
 
+    @staticmethod
     @api.app.route('/{}/tw-user-info/<user_name>'.format(API_NAME), methods=['get'])
     def get_user_info(user_name):
         try:

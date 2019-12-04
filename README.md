@@ -45,7 +45,7 @@ API_PORT = 8000
 TW_CREDENTIALS_FILE = "credentials.json"
 ```
 
-## Running the tests
+## Running the APP
 For starting virtual environment and API, just
 ```
 sh ./run.sh
@@ -64,7 +64,7 @@ curl -v http://127.0.0.1:8000/twitter-consumer/user/milanesacosmika
 Running test with unittest
 
 ```
-python -m unittest discover
+python -m unittest tests.test_basic
 ```
 
 ## Deployment

@@ -2,9 +2,8 @@ import sys
 sys.path.append('../')
 import os
 
-
 import unittest
-from flask.testing import FlaskClient
+from flask import Flask
 
 from twitter.twitter import TwUser, TwFollower, TwitterClient
 from utils.functions import load_config
@@ -47,7 +46,12 @@ class BasicTests(unittest.TestCase):
         self.assertNotEqual(len(obj_followers_user), 0)
 
     def test_apirest_get_user(self):
-        pass
+        app = Flask(__name__)
+
+        with app.app_context():
+            obj_api_rest = ApiRest(TW_CREDENTIALS_FILE, API_NAME, API_PORT)
+            res = obj_api_rest.get_user_info("milanesacosmika")
+        self.assertEqual(res[0].status_code, 200)
 
 
 if __name__ == "__main__":
