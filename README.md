@@ -26,6 +26,25 @@ Install all dependences with PIP
 pip install -r requirements.txt
 ```
 
+### Setup application
+
+Edit credentials.json file with valid credentials for twitter developer account
+```
+{
+  "consumer_api_key" : "",
+  "consumer_api_secret_key" : "",
+  "acces_token" : "",
+  "acces_token_secret" : ""
+}
+```
+
+You can setup custom settings in utils.config :
+```
+API_NAME = "twitter-consumer"
+API_PORT = 8000
+TW_CREDENTIALS_FILE = "credentials.json"
+```
+
 ### Usage
 
 Make a curl request to test de endpoint /tw-user-info/{twitter-user-name}
